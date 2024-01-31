@@ -2,10 +2,10 @@ const cam = document.querySelector('#video')
 
 Promise.all([ // Retorna apenas uma promisse quando todas já estiverem resolvidas
 
-    faceapi.nets.tinyFaceDetector.loadFromUri('/models'), // É igual uma detecção facial normal, porém menor e mais rapido
-    faceapi.nets.faceLandmark68Net.loadFromUri('/models'), // Pegar os pontos de referencia do sue rosto. Ex: olhos, boca, nariz, etc...
-    faceapi.nets.faceRecognitionNet.loadFromUri('/models'), // Vai permitir a api saber onde o rosto está localizado no video
-    faceapi.nets.faceExpressionNet.loadFromUri('/models') // Vai permitir a api saber suas expressões. Ex: se esta feliz, triste, com raiva, etc...
+    faceapi.nets.tinyFaceDetector.loadFromUri('./models'), // É igual uma detecção facial normal, porém menor e mais rapido
+    faceapi.nets.faceLandmark68Net.loadFromUri('./models'), // Pegar os pontos de referencia do sue rosto. Ex: olhos, boca, nariz, etc...
+    faceapi.nets.faceRecognitionNet.loadFromUri('./models'), // Vai permitir a api saber onde o rosto está localizado no video
+    faceapi.nets.faceExpressionNet.loadFromUri('./models') // Vai permitir a api saber suas expressões. Ex: se esta feliz, triste, com raiva, etc...
 
 ]).then(startVideo)
 
